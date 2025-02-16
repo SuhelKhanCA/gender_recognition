@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+</head>
+<body>
+    <h2>Prediction: {{ sample.predicted_gender }}</h2>
+    <p>Was this prediction correct?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="feedback" value="correct">Correct</button>
+        <button type="submit" name="feedback" value="incorrect">Incorrect</button>
+    </form>
+</body>
+</html>
